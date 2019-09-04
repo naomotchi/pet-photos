@@ -1,0 +1,70 @@
+.header{
+  height: 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba($color: rgb(172, 217, 223), $alpha: 1.0);
+  width: 100%;
+  display: block;
+  &__top{
+    margin: 10px auto;
+    width: 1040px;
+    line-height: 60px;
+    overflow: hidden;
+    position: relative;
+    &__logo{
+      width: 80%;
+      cursor: pointer;
+    }
+    &__logoul{
+      color: #999999;
+      font-size: 36px;
+      font-family: fantasy;
+      line-height: 85px;
+      width: 180px;
+      position: fixed;
+    }
+    &__logoli{
+      width: 180px;
+      position: absolute;
+      top: 0;
+      left: 200px;
+      font-family: fantasy;
+      color: #999999;
+    }
+    &__user{
+      position: fixed;
+      right: 100px;
+      width: 220px;
+      &__info{
+        text-align: center;
+        font-family: fantasy;
+        color: rgba($color: #9c7969, $alpha: 1.0);
+      }
+      &__login{
+        float: left;
+        padding: 0px 15px;
+        background-color: #F0DC69;
+        border-radius: 20px;
+        line-height: 30px;
+        margin: 0 10px;
+        font-family: serif;
+        cursor: pointer;
+        box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.4);
+      }
+      &__signin{
+        float: left;
+        padding: 0px 15px;
+        background-color: #009BE5;
+        border-radius: 20px;
+        line-height: 30px;
+        margin: 0 10px;
+        color: #fff;
+        font-family: serif;
+        cursor: pointer;
+        box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.4);
+      }
+    }
+  }
+}
