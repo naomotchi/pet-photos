@@ -1,0 +1,18 @@
+.footer{
+  background-color: rgba($color: #e6e1e1, $alpha: 1.0);
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+  &__contents{
+    text-align: center;
+  }
+  &__logo{
+    height: 50px;
+    width: 100%;
+    background-color: rgba($color: rgb(173, 158, 136), $alpha: 1.0);
+    position: absolute;
+    bottom: 0;
+    line-height: 50px;
+  }
+}
