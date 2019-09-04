@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+
+@import './reset';
+@import "photos";
+@import './header';
+@import './footer';
+
+html, p, ul, ol, div {
+  font-size: 14px;
+  color: #4C4C4C;
+}
