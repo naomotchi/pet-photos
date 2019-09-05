@@ -1,9 +1,10 @@
 .main-contents
   .main-contents__image
-    トップ画像
-    -# = image_tag 
-  .main-contents__pickup
-    投稿一覧
+    = link_to '/' do
+      = image_tag src="https://rank1-media.com/file/parts/I0003875/73e68ce9a3c2dc9827cdf6e7db68282c.jpg", id: "main-image"
+  .main-contents__info
+    可愛いペットの写真を投稿しましょう
+  = render 'pickup_contents'
   .main-contents__column
     コラム
   .main-contents__protection
