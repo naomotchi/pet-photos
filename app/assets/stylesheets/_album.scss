@@ -1,0 +1,28 @@
+.album{
+  overflow: hidden;
+  &__box{
+    height: 300px;
+    width: 250px;
+    background-color: rgba($color: #967d70, $alpha: 1.0);
+    float: left;
+    padding: 10px;
+    margin: 20px 42px;
+    border: solid 1px #ebebeb;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px 2px;
+    #pickup-image{
+      object-fit: cover;
+      height: 170px;
+      width: 250px;
+    }
+    &__body{
+    }
+    .album-name{
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 16px;
+      text-align: center;
+      line-height: 130px;
+      color: #fff;
+    }
+  }
+}

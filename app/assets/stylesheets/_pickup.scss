@@ -1,4 +1,6 @@
 .pickup{
+  text-decoration: none;
+  overflow: hidden;
   &__title{
     padding: 15px;
     text-align: center;
@@ -13,7 +15,7 @@
     background-color: #fff;
     float: left;
     padding: 10px;
-    margin: 15px;
+    margin: 15px 8px;
     border: solid 1px #ebebeb;
     cursor: pointer;
     #pickup-image{
@@ -28,15 +30,12 @@
   &__body{
     padding: 10px;
     height: 100px;
+    position: relative;
     .photos-name{
       overflow: hidden;
       text-align: center;
       padding: 5px;
       text-decoration: none;
-    }
-    .photos-name::after{
-      display: block;
-      content: '';
     }
     .photos-box{
       padding: 5px;
@@ -45,9 +44,15 @@
       overflow: hidden;
       text-decoration: none;
     }
-    .photos-text::after{
-      display: block;
-      content: '';
-    }
+    // .photos-text::after{
+    //   background: -webkit-gradient(linear,left top,right top,from(hsla(0,0%,100%,0)),color-stop(72%,#fff));
+    //   background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff 72%);
+    //   bottom: 0;
+    //   content: "";
+    //   height: 50%;
+    //   position: absolute;
+    //   right: 0;
+    //   width: 50%;
+    // }
   }
 }
