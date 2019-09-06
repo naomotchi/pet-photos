@@ -6,6 +6,11 @@
   bottom: 0;
   &__contents{
     text-align: center;
+    line-height: 100px;
+    font-size: 15px;
+    font-family: serif;
+    color: rgba($color: #9c7969, $alpha: 1.0);
+    cursor: pointer;
   }
   &__logo{
     height: 50px;
