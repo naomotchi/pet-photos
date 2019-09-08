@@ -1,0 +1,27 @@
+.photo-form
+  .photo-form__area
+    .photo-form__box
+      投稿フォーム
+      .field.image
+        = form_with model: @photo, local: true do |form|
+          .photo-form__box__info
+            画像を選んでください
+          %label(for="file")
+            #img_field{onclick: "$('#file').click()"}
+              - if @photo.image.present?
+                = image_tag(@photo.image.first)
+              - else
+              %i.fa.fa-camera
+              = form.file_field :image, class: "image", id: "file", style: "display:none;"
+          .photo-form__box__info
+            お名前
+          .photo-form__box__name
+            = form.text_field :name, id: "form-name"
+          .photo-form__box__info
+            コメントを入力してください
+          .photo-form__box__text
+            = form.text_area :text, id: "form-text"
+          .photo-form__box__btn
+            %label(for="form-btn")
+              投稿する
+              = form.submit "投稿する", id: "form-btn", style: "display:none;"

@@ -1,0 +1,41 @@
+.posts{
+  height: 100vh;
+  margin-top: 120px;
+  background-color: rgba($color: #e6e1e1, $alpha: 1.0);
+  &__area{
+    background-color: rgba($color: #e6e1e1, $alpha: 1.0);
+    padding-top: 20px;
+  }
+  &__box{
+    height: 300px;
+    padding: 50px 0;
+    width: 700px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    background-color: #fff;
+    border-radius: 3px;
+    &__info{
+      font-size: 30px;
+      font-family: serif;
+      color: rgba($color: #9c7969, $alpha: 1.0);
+      border-bottom: solid 1px #e6e1e1;
+    }
+    &__btn{
+      height: 50px;
+      line-height: 50px;
+      width: 400px;
+      color: #fff;
+      background-color: rgba($color: #70c4ca, $alpha: 1.0);
+      margin: 100px auto;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #post_btn{
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
