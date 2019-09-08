@@ -19,12 +19,15 @@
       cursor: pointer;
     }
     &__logoul{
-      color: #999999;
-      font-size: 36px;
       font-family: fantasy;
       line-height: 85px;
       width: 180px;
       position: fixed;
+    }
+    #header_title{
+      color: #999999;
+      font-size: 36px;
+      text-decoration: none;
     }
     &__logoli{
       width: 180px;
