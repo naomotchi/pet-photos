@@ -7,19 +7,23 @@
     padding-top: 20px;
   }
   &__box{
-    height: 600px;
-    padding: 50px 0;
+    font-family: fantasy;
+    color: rgba($color: #9c7969, $alpha: 1.0);
+    height: 630px;
+    padding: 40px 0;
     width: 700px;
     margin: 0 auto;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     position: relative;
     background-color: #fff;
     border-radius: 3px;
     &__info{
       padding: 10px;
-      font-size: 16px
+      font-size: 16px;
+      font-family: fantasy;
+      color: rgba($color: #9c7969, $alpha: 1.0);
     }
     &__name{
       height: 50px;
@@ -153,6 +157,7 @@
       background-color: rgba($color: #70c4ca, $alpha: 1.0);
       margin: 30px auto;
       border-radius: 4px;
+      font-family: fantasy;
       cursor: pointer;
       #form-btn{
 
