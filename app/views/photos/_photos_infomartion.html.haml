@@ -14,4 +14,7 @@
     .main-contents__protection__image
       = image_tag src="https://pro.foto.ne.jp/free/img/images_big/m030633.jpg"
   .main-contents__bottom
-    大切な家族との想い出を記録する(無料登録はこちら)
+    - if user_signed_in?
+      = link_to "大切な家族との想い出を記録する(投稿する)", new_photo_path, id: "info-link"
+    - else
+      = link_to "大切な家族との想い出を記録する(無料登録はこちら)", new_user_registration_path, id: "info-link"
