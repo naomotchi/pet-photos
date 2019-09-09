@@ -1,0 +1,18 @@
+= render 'layouts/header'
+.posts
+  .posts__area
+    .posts__box
+      = "#{current_user.nickname}さんのページ"
+    - @photo.each do |photo|
+      .pickup__box
+        = link_to "/", style: "text-decoration: none;" do
+          = image_tag url_for(photo.image.first), id: "pickup-image"
+          .pickup__photo
+          .pickup__body
+            %h3.photos-name 
+              = photo.name
+            .photos-box
+              .photos-text
+                = photo.text
+    = paginate(@photo)
+= render 'layouts/footer'

@@ -4,11 +4,12 @@
   - @photo.each do |photo|
     .pickup__box
       = link_to "/", style: "text-decoration: none;" do
-        = image_tag url_for(photo.images.first), id: "pickup-image"
+        = image_tag url_for(photo.image.first), id: "pickup-image"
         .pickup__photo
         .pickup__body
           %h3.photos-name 
             = photo.name
           .photos-box
             .photos-text
-              =photo.text
+              = photo.text
+  = paginate(@photo)
