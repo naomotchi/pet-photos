@@ -3,7 +3,7 @@ class PhotosController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
-    @photo = Photo.with_attached_images.order("id DESC").limit(8).page(params[:page]).per(5)
+    @photo = Photo.with_attached_images.includes(:user).page(params[:page]).per(5).order("created_at DESC")
   end
 
   def new
