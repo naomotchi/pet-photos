@@ -8,11 +8,8 @@
             画像を選んでください
           %label(for="file")
             #img_field{onclick: "$('#file').click()"}
-              - if @photo.image.present?
-                = image_tag(@photo.image.first)
-              - else
               %i.fa.fa-camera
-              = form.file_field :image, class: "image", id: "file", style: "display:none;"
+              = form.file_field :images, multiple: true, class: "image", id: "file", style: "display:none;"
           .photo-form__box__info
             お名前を入力してください
           .photo-form__box__name
