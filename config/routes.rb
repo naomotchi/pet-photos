@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   root  'photos#index'
 
   resources :photos do
-    member do
+    collection do
       get 'post'
     end
   end
-  get   'users/:id'   =>  'users#show' 
+      get   'users/:id'   =>  'users#show' 
 end

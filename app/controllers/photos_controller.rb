@@ -3,7 +3,7 @@ class PhotosController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
-    @photo = Photo.with_attached_images.includes(:user).page(params[:page]).per(5).order("created_at DESC")
+    @photo = Photo.includes(:user).page(params[:page]).per(5).order("created_at DESC")
   end
 
   def new
@@ -11,11 +11,10 @@ class PhotosController < ApplicationController
   end
 
   def create
-    Photo.create(name: photo_params[:name], images: photo_params[images: []], text: photo_params[:text], user_id: current_user.id)
+    @photo = Photo.create(photo_params)
     if @photo.save
-      redirect_to post_photos_path
     else
-      redirect_to :new
+      render :new
     end
   end
 
@@ -29,20 +28,21 @@ class PhotosController < ApplicationController
 
   def update
     @photo = Photo.find(params[:id])
-    @photo.update(photo_params)
-    redirect_to @photo
+    if @photo.user_id == current_user.id
+      @photo.update(photo_params)
+    end
   end
 
   def destroy
+    photo = Photo.find(params[:id])
+    photo.destroy if photo.user_id == current_user.id
   end
 
-  def post
-  end
 
   private
 
   def photo_params
-    params.require(:photo).permit(:name, :text, images: [])
+    params.require(:photo).permit(:name, :text, :image).merge(user_id: current_user.id)
   end
 
   def move_to_index

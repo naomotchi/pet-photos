@@ -1,14 +1,16 @@
+= render 'layouts/header'
 .photo-form
   .photo-form__area
     .photo-form__box
       投稿フォーム
       .field.image
-        = form_with model: @photo, local: true do |form|
+        = form_with(model: @photo, local: true) do |form|
           .photo-form__box__info
             画像を選んでください
-          #img_field{onclick: "$('#file').click()"}
-            %i.fa.fa-camera
-          = form.file_field :image, class: "image", id: "file", style: "display:none;"
+          %label(for="file")
+            #img_field{onclick: "$('#file').click()"}
+              %i.fa.fa-camera
+              = form.file_field :images, multiple: true, class: "image", id: "file", style: "display:none;"
           .photo-form__box__info
             お名前を入力してください
           .photo-form__box__name
@@ -19,5 +21,6 @@
             = form.text_area :text, id: "form-text"
           .photo-form__box__btn
             %label(for="form-btn")
-              投稿する
-              = form.submit "投稿する", id: "form-btn", style: "display:none;"
+              編集する
+              = form.submit "編集する", id: "form-btn", style: "display:none;"
+= render 'layouts/footer'
