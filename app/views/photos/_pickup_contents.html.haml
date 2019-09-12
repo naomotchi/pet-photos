@@ -4,8 +4,8 @@
   - @photo.each do |photo|
     .pickup__box
       = link_to "/", style: "text-decoration: none;" do
-        = image_tag url_for(photo.images.first), id: "pickup-image"
         .pickup__photo
+          = image_tag url_for(photo.image.to_s), id: "pickup-image"
         .pickup__body
           %h3.photos-name 
             = photo.name
