@@ -13,7 +13,14 @@
 
   }
   &__body{
-
+    .mypage-text{
+      border-bottom: solid 1px #e6e1e1;
+    }
+    .mypage-edit{
+      float: left;
+      padding: 0 35px;
+      border-right: solid 1px #e6e1e1;
+    }
   }
   .photos-name{
 
@@ -21,7 +28,5 @@
   .mypage-box{
 
   }
-  .mypage-text{
 
-  }
 }

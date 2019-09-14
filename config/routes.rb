@@ -3,9 +3,12 @@ Rails.application.routes.draw do
   root  'photos#index'
 
   resources :photos do
+    resources :comments, only: [:create]
     collection do
       get 'post'
     end
   end
-      get   'users/:id'   =>  'users#show' 
+
+  resources :users, only: [:show]
+
 end

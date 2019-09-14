@@ -1,0 +1,22 @@
+.comments
+  - if current_user
+    .comments__form
+      相手のことを考え丁寧なコメントを心がけましょう。
+      %br/
+      不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      = form_with url: photo_comments_path(@photo.id), method: :post, local: true do |f|
+        .photo-form__box__text
+          = f.text_area :text, id: "input-text"
+        .photo-form__box__btn
+          %label(for="form-btn")
+            コメントする
+            = f.submit "コメントする", id: "form-btn", style: "display:none;"
+  .comments__message
+    みんなのコメント一覧
+    - if @comments
+      - @comments.each do |c|
+        -if c.user_id == current_user.id
+          .comments__message__name
+            = link_to c.user.nickname, "/users/#{comment.user_id}" do
+              .comments__message__text
+                = c.text
