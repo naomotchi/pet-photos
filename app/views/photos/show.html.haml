@@ -1,0 +1,20 @@
+= render 'layouts/header'
+.details
+  .details__area
+    .details__box
+      .details__box__info
+        = "#{@photo.user.nickname}さんの投稿"
+      .details__box__photos
+        .details__box__photo
+          = image_tag url_for(@photo.image.to_s), id: "pickup-image"
+        .details__box__body
+          .details-name
+            = @photo.name
+          .details-text
+            = @photo.text
+          - if user_signed_in? && current_user.id == @photo.user_id
+            = link_to '編集', edit_photo_path(@photo), method: :get, id: "defalut-link"
+            = link_to '削除', photo_path(@photo.id), method: :delete , id: "defalut-link"
+        .details__box__btn
+          = link_to "トップページにもどる", root_path, id: "defalut-link"
+  = render 'comments'

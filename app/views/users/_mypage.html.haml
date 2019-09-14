@@ -12,6 +12,8 @@
         .mypage-box
           .mypage-text
             = photo.text
-      - if user_signed_in? && current_user.id == photo.user_id
-        = link_to '編集', "/photos/#{photo.id}/edit", method: :get
-        = link_to '削除', "/photos/#{photo.id}", method: :delete 
+        - if user_signed_in? && current_user.id == photo.user_id
+          .mypage-edit
+            = link_to '編集', edit_photo_path(photo), method: :get, id: "defalut-link"
+          .mypage-delete
+            = link_to '削除', "/photos/#{photo.id}", method: :delete, id: "defalut-link"

@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
   
-  before_action :move_to_index, except: :index
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @photo = Photo.includes(:user).page(params[:page]).per(5).order("created_at DESC")
@@ -20,10 +20,11 @@ class PhotosController < ApplicationController
 
   def show
     @photo = Photo.find(params[:id])
+    @comments = @photo.comments.includes(:user)
   end
 
   def edit
-    @photo = Photo.find(params[:id]) 
+    @photo = Photo.find(params[:id])
   end
 
   def update
