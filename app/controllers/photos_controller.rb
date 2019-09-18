@@ -3,7 +3,7 @@ class PhotosController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @photo = Photo.includes(:user).page(params[:page]).per(5).order("created_at DESC")
+    @photo = Photo.includes(:user).page(params[:page]).per(8).order("created_at DESC")
   end
 
   def new

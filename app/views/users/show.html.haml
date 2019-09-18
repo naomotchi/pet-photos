@@ -1,7 +1,7 @@
 = render 'layouts/header'
 .posts
   .posts__area
-    .posts__box
-      = render 'mypage'
+    = render 'mypage'
+  .paginate-defalut
     = paginate(@photo)
 = render 'layouts/footer'
