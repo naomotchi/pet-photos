@@ -4,13 +4,13 @@
       相手のことを考え丁寧なコメントを心がけましょう。
       %br/
       不快な言葉遣いなどは利用制限や退会処分となることがあります。
-      = form_with url: photo_comments_path(@photo.id), method: :post, local: true do |f|
+      = form_with url: photo_comments_path(@photo.id), method: :post, local: true ,id: "new_comment" do |f|
         .photo-form__box__text
-          = f.text_area :text, id: "input-text"
+          = f.text_area :text, id: "input-text", class: "textbox"
         .photo-form__box__btn
           %label(for="form-btn")
             コメントする
-            = f.submit "コメントする", id: "form-btn", style: "display:none;"
+            = f.submit "コメントする", id: "form-btn", class: "submit-btn", style: "display:none;"
 .messages
   .messages__info
     みんなのコメント一覧
@@ -23,3 +23,4 @@
               = c.user.nickname
               .messages__box__text
                 = c.text
+.background--gray

@@ -1,17 +1,19 @@
 .messages{
   height: 350px;
   width: 700px;
-  margin: 20px auto 0;
+  margin: 30px auto 0;
   padding-bottom: 50px;
   text-align: center;
   font-size: 18px;
   background-color: #fff;
+  border-radius: 8px;
   &__info{
     font-size: 16px;
     font-weight: bold;
     padding:10px;
   }
   &__area{
+    border-top: solid 1px #e6e1e1;
     height: 300px;
     overflow: scroll;
     &__box{
