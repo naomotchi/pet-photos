@@ -150,17 +150,17 @@
       color: #fff;
     }
     &__btn{
-      height: 50px;
-      line-height: 50px;
-      width: 400px;
-      color: #fff;
-      background-color: rgba($color: #70c4ca, $alpha: 1.0);
-      margin: 30px auto;
-      border-radius: 4px;
-      font-family: fantasy;
-      cursor: pointer;
-      #form-btn{
-
+      label{
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        width: 400px;
+        color: #fff;
+        background-color: rgba($color: #70c4ca, $alpha: 1.0);
+        margin: 30px auto;
+        border-radius: 4px;
+        font-family: fantasy;
+        cursor: pointer;
       }
     }
   }
