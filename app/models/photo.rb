@@ -6,8 +6,9 @@ class Photo < ApplicationRecord
   validates :name
   validates :image
   end
-  
-  has_many :comments
+
+  belongs_to :register
   belongs_to :user, optional: true
+  belongs_to :album
   has_many :comments,foreign_key: :photo_id, dependent: :destroy
 end
