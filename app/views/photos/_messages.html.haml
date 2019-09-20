@@ -1,0 +1,13 @@
+.messages
+  .messages__info
+    みんなのコメント一覧
+  .messages__area
+    - if @comments
+      - @comments.each do |c|
+        -if c.user_id == current_user.id
+          .messages__box
+            .messages__box__name
+              = c.user.nickname
+              .messages__box__text
+                = c.text
+.background--gray
