@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       get 'post'
     end
   end
-
+  resources :albums
   resources :users, only: [:show]
 
 end

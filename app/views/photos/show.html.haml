@@ -6,16 +6,18 @@
         = "#{@photo.user.nickname}さんの投稿"
       .details__box__photos
         .details__box__photo
-          = image_tag url_for(@photo.image.to_s), id: "pickup-image"
+          = image_tag url_for(@photo.image), id: "details-image"
         .details__box__body
           .details-name
             = @photo.name
           .details-text
             = @photo.text
-          - if user_signed_in? && current_user.id == @photo.user_id
+        - if user_signed_in? && current_user.id == @photo.user_id
+          .details__box__edit
             = link_to '編集', edit_photo_path(@photo), method: :get, id: "defalut-link"
+          .details__box__delete
             = link_to '削除', photo_path(@photo.id), method: :delete , id: "defalut-link"
         .details__box__btn
-          = link_to "トップページにもどる", root_path, id: "defalut-link"
+          = link_to "トップページにもどる", root_path, id: "details-btn", class: "details__box__btn"
     = render 'comments'
 = render 'layouts/footer'

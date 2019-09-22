@@ -1,0 +1,25 @@
+.albums{
+  margin-top: 120px;
+  &__area{
+  padding-top: 20px;
+  position: relative;
+  }
+  &__left-box{
+    height: 600px;
+    width: 705px;
+    background-color: #fff;
+    box-shadow: 2px 2px 6px 2px;
+    position: absolute;
+    left: 10px;
+    border-radius: 10px;
+  }
+  &__right-box{
+    height: 600px;
+    width: 705px;
+    background-color: #fff;
+    box-shadow: 2px 2px 6px 2px;
+    position: absolute;
+    right: 10px;
+    border-radius: 10px;
+  }
+}

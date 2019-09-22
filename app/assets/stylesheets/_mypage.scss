@@ -15,19 +15,25 @@
     border-bottom: solid 1px #e6e1e1;
   }
   &__area{
-    overflow: hidden;
+    overflow: scroll;
   }
   &__box{
-    margin: 10px 20px;
+    margin: 20px 10px;
     float: left;
     border: solid 2px #e6e1e1;
+    max-width: 200px;
+    overflow: hidden;
   }
   &__photo{
 
   }
   &__body{
+    border-top: solid 1px #e6e1e1;
     .mypage-text{
       border-bottom: solid 1px #e6e1e1;
+      max-height: 50px;
+      height: 50px;
+      overflow: scroll;
     }
     .mypage-edit{
       float: left;
@@ -41,5 +47,8 @@
   .mypage-box{
 
   }
-
+  #mypage-image{
+    height: 150px;
+    width: 200px;
+  }
 }

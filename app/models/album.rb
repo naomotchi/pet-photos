@@ -1,4 +1,3 @@
 class Album < ApplicationRecord
-  has_many :photos, dependent: :destroy
-  belongs_to :register
+  # has_many :photos, dependent: :destroy
 end
