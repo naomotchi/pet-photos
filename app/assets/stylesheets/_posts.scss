@@ -15,8 +15,10 @@
     background-color: #fff;
     border-radius: 3px;
     h2{
-      padding:10px;
+      color: #9c7969;
+      padding:25px;
       font-weight: bold;
+      border-bottom: solid 1px #e6e1e1;
     }
     &__info{
       padding: 15px;
@@ -25,19 +27,30 @@
       color: rgba($color: #9c7969, $alpha: 1.0);
       border-bottom: solid 1px #e6e1e1;
     }
-    &__btn{
+    // &__btn{
+    //   height: 50px;
+    //   line-height: 50px;
+    //   width: 400px;
+    //   color: #fff;
+    //   background-color: rgba($color: #70c4ca, $alpha: 1.0);
+    //   margin: 100px auto;
+    //   border-radius: 4px;
+    //   cursor: pointer;
+    // }
+    #post_btn{
+      text-decoration: none;
+      display: block;
       height: 50px;
       line-height: 50px;
       width: 400px;
       color: #fff;
-      background-color: rgba($color: #70c4ca, $alpha: 1.0);
+      background-color: #70c4ca;
       margin: 100px auto;
       border-radius: 4px;
       cursor: pointer;
     }
-    #post_btn{
-      text-decoration: none;
-      color: #fff;
+    .field{
+      padding: 15px;
     }
   }
 }
