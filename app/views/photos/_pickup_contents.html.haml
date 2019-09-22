@@ -5,7 +5,7 @@
     .pickup__box
       = link_to photo_path(photo), style: "text-decoration: none;" do
         .pickup__photo
-          = image_tag url_for(photo.image.to_s), id: "pickup-image"
+          = image_tag url_for(photo.image), id: "pickup-image"
         .pickup__body
           %h3.photos-name 
             = photo.name

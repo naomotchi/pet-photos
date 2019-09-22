@@ -7,7 +7,7 @@
     padding-top: 20px;
   }
   &__box{
-    height: 350px;
+    height: 700px;
     width: 700px;
     margin: 0px auto;
     text-align: center;
@@ -26,19 +26,52 @@
     }
     &__photos{
       border-top: solid 1px #e6e1e1;
-      padding: 10px 0;
-      &__photo{
-
-      }
-      &__btn{
-      }
-      &__body{
-        border-bottom: solid 1px #e6e1e1;
-      }
+      padding: 20px;
+    }
+    &__photo{
+      padding-bottom: 10px;
+    }
+    &__edit{
+      margin: 10px;
+      background-color: antiquewhite;
+      display: inline-block;
+      padding: 10px;
+      border-radius: 50%;
+    }
+    &__delete{
+      margin: 10px;
+      background-color: antiquewhite;
+      display: inline-block;
+      padding: 10px;
+      border-radius: 50%;
     }
   }
-  .details-box{
+  #details-btn{
+    height: 50px;
+    line-height: 50px;
+    width: 300px;
+    background-color: #e6e1e1;
+    margin: 0 auto;
+    border-radius: 6px;
+    display: inline-block;
+    text-decoration: none;
+    color: #4C4C4C;
+    cursor: pointer;
+  }
+  #details-image{
+    height: 350px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .details-name{
+    padding: 10px;
+    border-bottom: solid 1px #e6e1e1;
   }
   .details-text{
+    padding: 20px;
+    border-bottom: solid 1px #e6e1e1;
+    max-height: 100px;
+    overflow: scroll;
   }
 }
