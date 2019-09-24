@@ -11,4 +11,6 @@ class Photo < ApplicationRecord
   # belongs_to :album
   belongs_to :user, optional: true
   has_many :comments,foreign_key: :photo_id, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :liking_users, through: :likes, source: :user
 end

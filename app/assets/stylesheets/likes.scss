@@ -1,0 +1,28 @@
+.iine{
+  margin-top: 10px;
+  padding: 0 18px;
+    &__button{
+    background: linear-gradient(to right, #89d8c0, #afeedb);
+    line-height: 20px;
+    color: #ec7aa0;
+    font-size: 12px;
+    display: inline-block;
+    border-radius: 100px;
+    font-weight: bold;
+    .fa{
+      float: left;
+      line-height: 20px;
+    }
+    .up{
+      float: left;
+    }
+    .down{
+      float: left;
+    }
+    .info{
+      padding: 0 5px;
+      float: left;
+      text-decoration: none;
+    }
+  }
+}

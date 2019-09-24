@@ -12,3 +12,6 @@
           .photos-box
             .photos-text
               =photo.text
+            .photos-like
+              %i.fa.fa-heart
+              = "#{photo.likes.count}"
