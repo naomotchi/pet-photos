@@ -74,5 +74,5 @@ gem 'devise'
 gem 'font-awesome-rails'
 gem 'font-awesome-sass', '~> 5.4.1'
 gem 'kaminari'
-gem 'carrierwave'
+# gem 'carrierwave'
 gem "aws-sdk-s3", require: false
