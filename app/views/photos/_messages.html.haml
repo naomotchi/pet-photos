@@ -1,6 +1,6 @@
 .messages
   .messages__info
-    みんなのコメント一覧
+    コメント一覧
   .messages__area
     - if @comments
       - @comments.each do |c|
@@ -8,6 +8,6 @@
           .messages__box
             .messages__box__name
               = c.user.nickname
-              .messages__box__text
-                = c.text
+            .messages__box__text
+              = c.text
 .background--gray

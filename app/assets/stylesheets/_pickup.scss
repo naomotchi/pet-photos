@@ -52,15 +52,10 @@
       text-decoration: none;
       color: #fff;
     }
-    // .photos-text::after{
-    //   background: -webkit-gradient(linear,left top,right top,from(hsla(0,0%,100%,0)),color-stop(72%,#fff));
-    //   background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff 72%);
-    //   bottom: 0;
-    //   content: "";
-    //   height: 50%;
-    //   position: absolute;
-    //   right: 0;
-    //   width: 50%;
-    // }
+    .photos-like{
+      position: absolute;
+      bottom: 0;
+      color: #fff;
+    }
   }
 }

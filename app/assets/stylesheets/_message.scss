@@ -11,16 +11,23 @@
     font-size: 16px;
     font-weight: bold;
     padding:10px;
+    font-family: serif;
+    color: #9c7969;
   }
   &__area{
     border-top: solid 1px #e6e1e1;
     height: 300px;
     overflow: scroll;
-    &__box{
-      &__name{
-      }
-      &__text{
-      }
+  }
+  &__box{
+    text-align: left;
+    padding: 10px;
+    &__name{
+      display: inline-block;
+    }
+    &__text{
+      display: inline-block;
+      padding-left: 20px;
     }
   }
 }
