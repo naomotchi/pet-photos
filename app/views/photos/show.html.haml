@@ -17,6 +17,9 @@
             = link_to '編集', edit_photo_path(@photo), method: :get, id: "defalut-link"
           .details__box__delete
             = link_to '削除', photo_path(@photo.id), method: :delete , id: "defalut-link"
+        - if user_signed_in?
+          - unless current_user.id == @photo.user_id
+            = render partial: 'photos/photos', member: @photo, as: :photo
         .details__box__btn
           = link_to "トップページにもどる", root_path, id: "details-btn", class: "details__box__btn"
     = render 'comments'
